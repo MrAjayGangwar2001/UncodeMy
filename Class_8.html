@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/60e9ff31d7.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Class_8 by UnCodeMy</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+
+
+
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+
+            background-color: rgb(14, 135, 240);
+            width: 100%;
+
+        }
+
+        .menu {
+            display: flex;
+            justify-content: right;
+            width: 100%;
+            padding: 5px;
+
+        }
+
+        .menu ul {
+            display: flex;
+
+            list-style: none;
+            margin-right: 20px;
+        }
+
+        .menu .dropdown ul {
+            display: block;
+            margin-top: 5px;
+            padding: 0px;
+            width: max-content;
+        }
+
+
+        .menu .dropdown ul {
+            a {
+                padding: 0px;
+                font-size: 12px;
+
+
+            }
+        }
+
+        .dropdown {
+            display: none;
+
+
+        }
+
+        ul li:hover .dropdown {
+            display: block;
+            position: absolute;
+            background-color: rgb(14, 135, 240);
+            margin-top: 8.2px;
+            margin-left: -10px;
+
+
+        }
+
+        .menu ul li:hover {
+            display: block;
+            background-color: lightgreen;
+
+
+        }
+
+        .menu .dropdown ul li {
+            display: flex;
+            padding: 2px;
+            margin: 3px;
+        }
+
+        .navbar .menu ul li {
+            padding: 10px;
+            margin-right: 20px;
+            cursor: pointer;
+            color: white;
+            font-size: 15px;
+            font-weight: 600;
+
+
+        }
+
+        /* 👇👇😊👇👇👇😊😊NESTED-DROP DOWN😊👇👇👇👇😊😊😊😊*/
+
+        .dropdown .nested-dropdown ul {
+            display: block;
+            margin-top: 5px;
+            padding: 0px;
+            width: 107.3px;
+        }
+
+
+        .menu .dropdown .nested-dropdown ul {
+            a {
+                padding: 0px;
+                font-size: 12px;
+
+
+            }
+        }
+
+        .nested-dropdown {
+            display: none;
+
+        }
+
+        .dropdown ul li:hover .nested-dropdown {
+            display: block;
+            position: absolute;
+            background-color: rgb(14, 135, 240);
+            margin-top: 30px;
+            margin-left: -13px;
+            padding: 2px;
+
+
+        }
+
+        .menu .dropdown .nested-dropdown ul li {
+            display: flex;
+            padding: 2px;
+            margin: 3px;
+
+        }
+
+        .heading {
+            font-size: 1.8em;
+            color: white;
+            align-content: center;
+            margin: 10px;
+            padding: 5px;
+
+        }
+
+        .search {
+            position: relative;
+            
+        }
+
+        .search i{
+            position: absolute;
+            right: 0px;
+            top: 7px;
+            transform: translate(-10%);
+            x-index: 1;
+            
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h2 style="background-color: black; color:darkgrey ">Dropdown , Nested Dropdown and Collapese</h2>
+
+    <div class="navbar">
+        <h1 class="heading">CodingLab
+            
+        </h1>
+        <div class="menu">
+            <ul>
+                <li>HOME</li>
+                <li>HTML & CSS
+                    <div class="dropdown">
+                        <ul>
+                            <li><a href="#">Web Design</a> </li>
+                            <li><a href="#">Login Form</a></li>
+                            <li><a href="#">Logo Design</a></li>
+                            <li><a href="#">Card Design</a></li>
+                            <li>More
+                                <div class="nested-dropdown">
+                                    <ul>
+                                        <li><a href="#">Tutorials</a></li>
+                                        <li><a href="#">Resources</a></li>
+                                        <li><a href="#">Articles</a></li>
+                                        <li><a href="#">Guides</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>JAVASCRIPT
+                    <div class="dropdown">
+                        <ul>
+                            <li><a href="#">DOM</a> </li>
+                            <li><a href="#">Event Handling</a> </li>
+
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#contact">CONTACT US</a> </li>
+                <li><a href="#ABOUT US">ABOUT US</a> </li>
+
+            </ul>
+
+            <div class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search...">
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

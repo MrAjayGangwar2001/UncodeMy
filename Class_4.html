@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class_4 by UnCodeMy</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        img{
+            display: flex;
+            height: 400px;   
+        }
+        .header{
+            background-color: antiquewhite;
+            height: 70px;
+            width: auto;
+
+        }
+        .main-container{
+            display: flex;
+            justify-content:center;
+            height: 200px;
+            
+        }
+        .para{
+            text-align: center;
+            padding-top: 20px;
+        }
+        .small{
+            width: 50%;
+            background-color: cadetblue;
+
+        }
+        .big{
+            width: 50%;
+            background-color: rgb(29, 202, 173);
+        }
+        
+        
+        .footer{
+            background-color: chocolate;
+            height: 70px;
+            width: auto;
+            border: .1px solid chocolate;
+            
+        }
+       
+    </style>
+</head>
+<body>
+    <h3>Now, We will will learn Image Mapping , Favicon </h3>
+
+    <h3>Favicon</h3>
+
+    <div class="header">
+        <p class="para">Cities</p>
+    </div>
+    <div class="main-container">
+        <div class="small">
+            <ul>
+            <li><a href="#">London</a> </li>
+            <li><a href="#">Paris</a> </li>
+            <li><a href="#">Tokyo</a> </li>
+        </div>
+        <div class="big">
+            <h2 style="text-align: center; margin-top:10px; margin-bottom:0%; " >London</h2>
+            <p style="margin-left: 20px;">Lorem ipsum dolor sit amet consectetur
+             adipisicing elit. Aliquid soluta ea ab rem vitae
+             magnam provident quibusdam officiis delectus veritatis.</p>
+        </div>
+    </div>
+    <div class="footer">
+        <p class="para" style="margin-top:0% ">Footer</p>
+    </div>
+
+
+    <h3>Image Mapping</h3>
+    <p>There are Three Type Of Image Mapping </p>
+    <h4>1. Rectangle(Rect) for Rectangle</h4>
+    <h4>2. Circle(circle) for Circle</h4>
+    <h4>3. Poly(poly) For Undefined Structure</h4>
+
+    <img src="image1.png" alt="Nature_image" usemap="#nature">
+
+    <map name="nature">
+        <area shape="rect" coords="95, 27, 143, 77" href="Class_3.html " alt="Nature ">
+        <area shape="circle" coords="294, 225, 44" href="Class_3.html " alt="Nature ">
+    </map>
+</body>
+</html>
