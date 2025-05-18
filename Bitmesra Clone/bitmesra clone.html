@@ -29,6 +29,15 @@
             margin: 0px;
         }
 
+        .font-resize span,
+        .font-resize button {
+            font-weight: bold;
+            font-size: .8rem;
+            background: transparent;
+            border: none;
+            color: white;
+        }
+
         .dropdown-menu .form-check-input {
             accent-color: red;
             /* changes tick and box border color */
@@ -149,12 +158,20 @@
         marquee a {
             font-weight: 500;
             text-decoration: none;
+            color: white;
         }
 
         marquee {
             box-sizing: border-box;
             border-left: 0px solid white;
+
         }
+
+        .mx-2 {
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+
 
 
 
@@ -218,6 +235,15 @@
             border-left: 1px solid white;
             height: 20%;
         }
+
+        .footer a:hover {
+            color: red !important;
+            font-weight: 700;
+        }
+
+        .py-1 a:hover {
+            color: grey !important;
+        }
     </style>
 </head>
 
@@ -241,13 +267,18 @@
             </ul>
 
             <ul class="nav ">
-                <small class="mail mt-1 text-light text-center me-3">
-                    <i class="fa-regular fa-envelope fa-sm"></i>
+                <small class="mail  text-light d-flex align-items-center me-3">
+                    <i class="fa-regular fa-envelope text-center fa-sm p-1 mt-1"></i>
                     <a href="#" class="text-light " style="text-decoration: none;">webmail</a>
 
                 </small>
+                <div class="font-resize d-flex align-items-center ms-2 me-1">
+                    <span class="text-white">A</span>
+                    <span class="btn btn-sm btn-light px-1 py-0" onclick="changeFontSize('+')">+</span>
+                    <span class="btn btn-sm btn-light px-1 py-0" onclick="changeFontSize('-')">-</span>
+                </div>
                 <!-- Our Campus Dropdown -->
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown d-flex align-items-center">
                     <a class="nav-link1 dropdown-toggle px-2 text-light" href="#" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         Our Campus
@@ -278,7 +309,7 @@
                 </li>
 
                 <!-- Select Language Dropdown -->
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown d-flex align-items-center">
                     <a class="nav-link1 dropdown-toggle text-light px-2 " href="#" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         Select Language
@@ -556,25 +587,23 @@
     </div>
 
 
-    <div class="container-fluid d-flex justify-content-between mt-0.9">
-        <marquee height="40" width="100%" direction="left" onmouseover="this.stop()" ; onmouseout="this.start()" ;
-            style="background-color: orangered; color:white ">
-            <a class="text-white " href="#">Temporary Accomodation for Final Year Students returning
-                for Viva Presentation </a>
-            <a class="text-white " href="#"> | Request for application of G.P. Birla Scholarship
-                Reimbursement</a>
-            <a class="text-white " href="#"> | Additional List of Students for BIT Financial
-                Assistantship</a>
-            <a class="text-white " href="#"> | Provisional List of Students for GP Birla
-                Scholarship</a>
-            <a class="text-white " href="#"> | Academic Calendar for Short Semester 2025</a>
+    <div class="container-fluid d-flex justify-content-between mt-1">
+        <marquee height="40" width="100%" direction="left" onmouseover="this.stop()" onmouseout="this.start()"
+            style="background-color: orangered; padding: 10px 0;">
+            <a class="text-white mx-3" href="#">Temporary Accommodation for Final Year Students returning for Viva
+                Presentation</a>
+            <a class="text-white mx-2" href="#">Request for application of G.P. Birla Scholarship Reimbursement</a>
+            <a class="text-white mx-2" href="#">Additional List of Students for BIT Financial Assistantship</a>
+            <a class="text-white mx-2" href="#">Provisional List of Students for GP Birla Scholarship</a>
+            <a class="text-white mx-2" href="#">Academic Calendar for Short Semester 2025</a>
         </marquee>
     </div>
 
 
+
     <div class="container-fluid m-3">
         <div class="col d-flex justify-content-start ms-1 w-100 ">
-            <div class="card" style="width: 62%;">
+            <div class="card" style="width: 64%;">
                 <div class="heading" style="font-weight: 700;color: #9b032cb8;
             font-weight: 700;
             margin-top: 20px;
@@ -678,15 +707,16 @@
 
                 </div>
             </div>
-            <div class="card bg-dark ms-2 position-relative" style="width: 35%;">
+            <div class="card bg-dark ms-3 position-relative" style="width: 32%;">
                 <div class="card-body">
                     <div class="img">
-                        <img src="image/bg.jpg" class="card-img card-img-overlay w-100 d-block">
+                        <img src="image/bg.jpg" class="card-img card-img-overlay w-100 d-block"
+                            style="padding:0px !important">
                     </div>
 
                 </div>
-                <div class="card-body  position-absolute top-0 start-0 text-light m-3 lh-lg">
-                    <h4 class="card-title mt-2 p-2 text-white border-bottom">Equipped for innovators</h4>
+                <div class="card-body  position-absolute top-0 start-0 text-light m-1 lh-lg">
+                    <h5 class="card-title pb-4 text-white fw-bold border-bottom">Equipped for innovators</h5>
                     <p class="card-text">Our state-of the-art facilities are at the intersection of learning and
                         hands-on-experience, which equip students to deep dive into real-life work situations. From
                         advanced labs with high-end servers to a wide gamut of print and digital learning resources in
@@ -934,7 +964,7 @@
                     </div>
                 </div>
 
-                <y data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0"
+                <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0"
                     class="scrollspy-example shadow-lg p-2" tabindex="0" style="max-height: 410px; overflow-y: auto;">
                     <div class="card" id="scrollspyHeading1" style="width: 21rem;">
                         <img src="https://picsum.photos/id/302/2500" class="card-img-top" alt="...">
@@ -1048,30 +1078,11 @@
                                 and make up the bulk of the card's content.</p>
                         </div>
                     </div>
-
+                </div>
             </div>
-            <!-- <div id="section2" class="container-fluid bg-warning p-2">
-                        <h1>Section 2</h1>
-                        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this
-                            section!</p>
-
-                    </div>
-
-                    <div id="section3" class="container-fluid bg-secondary text-white p-2">
-                        <h1>Section 3</h1>
-                        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this
-                            section!</p>
-
-                    </div> -->
-
-
-
-
-
-
         </div>
     </div>
-    </div>
+
 
 
     <div class="container-fluid mt-5">
@@ -1272,13 +1283,11 @@
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="card ms-3">
-                                            <div class="card-body shadow-lg">
+                                            <div class="card-body shadow-lg ">
                                                 <img src="https://picsum.photos/id/247/2500" class="d-block w-100"
                                                     alt="...">
                                                 <h5 class="card-title text-danger p-2 text-center">Special title
                                                     treatment</h5>
-
-
                                             </div>
                                         </div>
                                     </div>
@@ -1474,7 +1483,7 @@
                             <span class="visually-hidden">Next</span>
                         </button>
                     </div>
-                    <div class="footer">
+                    <div class="footer p-4">
                         <a href="#" class="alert-link d-flex justify-content-center fw-normal text-decoration-none">
                             <p class="para border border-danger text-danger mt-3 p-1">Go to Image gallery
                                 <i class="fa-solid fa-angles-right fa-sm mt-3"></i>
@@ -1489,13 +1498,13 @@
         </div>
     </div>
 
-    <div class="container-fluid mt-5 border" style="background-color: #072453;">
+    <div class="container-fluid mt-5" style="background-color: #072453;">
         <h3 class="text-white mt-3">ACHIEVEMENTS</h3>
         <div class="col d-flex justify-content-start">
-            <div class="card m-2 p-2 h-95" style="max-width: 400px;">
+            <div class="card m-2 p-2 h-95 border-light" style="max-width: 400px;">
 
 
-                <div class="card-body">
+                <div class="card-body ">
                     <div class="list-group">
                         <a href="#" class="list-group-item list-group-item-action" aria-current="true">
                             <div class="d-flex w-100">
@@ -1783,8 +1792,6 @@
                     </div>
                 </div>
 
-
-
             </div>
 
         </div>
@@ -1807,6 +1814,23 @@
 
 
     </div>
+
+    <script>
+        let currentSize = 100;
+
+        function changeFontSize(action) {
+            if (action === '+') {
+                currentSize += 10;
+            } else if (action === '-') {
+                currentSize -= 10;
+            }
+
+            // Clamp font size between 70% and 150%
+            currentSize = Math.min(150, Math.max(70, currentSize));
+
+            document.body.style.fontSize = currentSize + '%';
+        }
+    </script>
 
 
 
